@@ -1,0 +1,77 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "VideoGuard: Start AI Service",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"scripts\\start-ai.ps1"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "VideoGuard: Start Frontend",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"frontend",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"127.0.0.1"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "VideoGuard: Launch AI Service",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"scripts\\start-ai.ps1"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "VideoGuard: Start Backend",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"scripts\\start-backend.ps1"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "VideoGuard: Launch Backend",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"scripts\\start-backend.ps1"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

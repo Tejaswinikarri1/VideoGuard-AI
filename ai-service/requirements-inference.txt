@@ -1,0 +1,4 @@
+# Everything needed to RUN the AI service (no training). Install torch/torchvision first (see README), then:
+#   pip install -r requirements-inference.txt
+-r requirements-core.txt
+-r requirements-ml.txt

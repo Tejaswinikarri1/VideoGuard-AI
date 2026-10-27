@@ -1,0 +1,32 @@
+spring:
+  application.name: videoguard-backend
+  data.mongodb:
+    uri: ${MONGODB_URI}
+    auto-index-creation: true
+  servlet.multipart:
+    max-file-size: ${MAX_UPLOAD_SIZE_MB:500}MB
+    max-request-size: ${MAX_UPLOAD_SIZE_MB:500}MB
+server:
+  port: ${BACKEND_PORT:8081}
+  error.include-stacktrace: never
+  error.include-message: never
+app:
+  frontend-origin: ${FRONTEND_ORIGIN:http://localhost:5173}
+  jwt-secret: ${JWT_SECRET}
+  jwt-ttl-minutes: ${JWT_ACCESS_TOKEN_TTL_MINUTES:15}
+  media-token-ttl-seconds: 300
+  video-root: ${VIDEO_STORAGE_ROOT:./data/videos}
+  evidence-root: ${EVIDENCE_STORAGE_ROOT:./data/evidence}
+  max-upload-mb: ${MAX_UPLOAD_SIZE_MB:500}
+  max-duration-seconds: ${MAX_VIDEO_DURATION_SECONDS:3600}
+  ai-service-url: ${AI_SERVICE_URL:http://localhost:8000}
+  ai-service-token: ${AI_SERVICE_TOKEN}
+  worker-threads: ${WORKER_THREADS:1}
+  job-lease-seconds: ${JOB_LEASE_SECONDS:120}
+  max-job-attempts: ${MAX_JOB_ATTEMPTS:2}
+  bootstrap-admin-email: ${BOOTSTRAP_ADMIN_EMAIL:}
+  bootstrap-admin-password: ${BOOTSTRAP_ADMIN_PASSWORD:}
+  ffmpeg-bin: ${FFMPEG_BIN:ffmpeg}
+  ffprobe-bin: ${FFPROBE_BIN:ffprobe}
+  storage-quota-gb: ${STORAGE_QUOTA_GB:100}
+management.endpoints.web.exposure.include: health

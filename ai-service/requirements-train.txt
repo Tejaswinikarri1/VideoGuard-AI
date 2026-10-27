@@ -1,0 +1,5 @@
+# Only needed for training/evaluation tooling (training/*.py), not for running the service.
+matplotlib>=3.8
+scipy>=1.11
+pandas>=2.0
+polars>=1.0

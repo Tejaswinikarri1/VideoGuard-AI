@@ -1,0 +1,19 @@
+/* Colors sampled from the supplied mockups. Dark-first; light theme via [data-theme="light"]. */
+:root, [data-theme="dark"] {
+  --bg: #050b1a; --bg-elev: #0a1530; --card: #0b1736; --card-2: #0d1b3f;
+  --border: #1a2d57; --border-strong: #24407a;
+  --text: #ffffff; --text-muted: #8fa6d1; --text-dim: #6b82ad;
+  --primary: #0b63f6; --primary-hover: #2a78ff; --link: #2f8cff;
+  --input-bg: #081230; --danger: #ef3b4a; --success: #17b26a; --warning: #f5a524;
+  --sev-high: #e5343f; --sev-medium: #f5a524; --sev-low: #17b26a;
+  --hero-overlay: linear-gradient(120deg, #040a1a 0%, #07163a 55%, #0a2a6b 100%);
+}
+[data-theme="light"] {
+  --bg: #f2f6fd; --bg-elev: #ffffff; --card: #ffffff; --card-2: #f5f8ff;
+  --border: #d4def2; --border-strong: #a9bde6;
+  --text: #0b1736; --text-muted: #4a5f8a; --text-dim: #6b7fa8;
+  --primary: #0b63f6; --primary-hover: #0a52cc; --link: #0b63f6;
+  --input-bg: #f5f8ff; --danger: #d92d3b; --success: #0f9b5a; --warning: #c98512;
+  --sev-high: #d92d3b; --sev-medium: #c98512; --sev-low: #0f9b5a;
+  --hero-overlay: linear-gradient(120deg, #dfe9fb 0%, #c7d9f8 55%, #a9c4f3 100%);
+}

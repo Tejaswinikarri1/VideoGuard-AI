@@ -1,0 +1,4 @@
+# Install AFTER requirements-core.txt. On Windows/CPU use the CPU wheel index first:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+ultralytics>=8.3
+lap>=0.5
